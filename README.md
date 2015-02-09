@@ -2,7 +2,7 @@
 random
 
 #import os
-#os.chdir('C:\\Users\\e544108\\Documents\\My\\Python')
+
 
 def factor(n):
 	if n == 1:
