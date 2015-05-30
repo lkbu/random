@@ -34,7 +34,18 @@ def pr1(n):
 
 def pr2():
 	return reduce(lambda x,y: x+y, filter(lambda x: x%2==0, fib(4000000)))
-	
+
+
+def pr3(n):
+	divisors = range(2,n+1)
+	test = range(2,n+1)
+	s = reduce(lambda x,y: x*y, divisors)
+	for i in range(2,n+1):
+		if sum(map(lambda x: (s/(n+2-i))%x, divisors))==0:
+			s = (s/(n+2-i))
+			test.remove(n+2-i)
+	return s
+
 def pr6(n):
 	return ((n-1)*n/2)*((n-1)*n/2) - sum2(n)
 
